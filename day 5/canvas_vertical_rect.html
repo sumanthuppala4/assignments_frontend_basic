@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  >
+	<head> </head>
+	<body>
+	<h3>Graphics in HTML5 - Using Canvas </h3>
+		<hr/>	 
+		
+		<input type="button"  onclick="f1()"  value="Draw Graphics" />
+		<br/> <br/>
+		
+		<canvas  id="c1"  width="300"  height="300"  style="border:2px solid blue;">
+		</canvas>
+        <script>
+            function f1(){
+            var obj=document.getElementById("c1");
+            var ctx=obj.getContext("2d");
+            x=10;
+            var a = [50, 200, 50, 90, 150, 40, 100];
+           
+            for(var i = 0; i < 7; i++)
+            {
+            ctx.beginPath();
+            ctx.fillStyle = "Blue";
+			ctx.fillRect(x,a[i],30,300-a[i] );
+            x=x+40;
+
+            }
+           
+			}
+            		
+        
+
+     
+       </script>
+       </body>
+       </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+        <style>
+            #div1,#div2{
+                border:2px solid pink;
+                width:400px;
+                height:200px;
+                text-align: center;
+               
+                float: left;
+                margin-right:20px;
+               
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="div1">
+            <img src="C:\frontend\day 3\image4.jpg" width="100 " height="100" id="img1"  
+            draggable="true" 
+            ondragstart="fn_dragStart(event)"/>
+            <img src="C:\frontend\day 2\image5.jpg" width="100 " height="100" id="img2"  
+            draggable="true" 
+            ondragstart="fn_dragStart(event)"/>
+            <img src="C:\frontend\day 3\iamge2.jpg"  width="100 " height="100"id="img3"  
+            draggable="true" 
+            ondragstart="fn_dragStart(event)"/>
+
+            
+
+        </div>
+        
+        <div id="div2"  ondrop="fn_drop(event)" ondragover="fn_dragOver(event)">
+
+	   </div>
+        <script>
+            function fn_dragStart(event)
+            {
+                selectedId  =  event.target.id ;
+                	
+            }
+            function fn_dragOver(event) 
+		    {
+			 event.preventDefault();
+		    }
+
+		function fn_drop(event) 
+		{
+			event.preventDefault();
+			var  obj  =  document.getElementById(selectedId);
+			event.target.appendChild( obj );			
+		}		
+
+        </script>
+    </body>
+</html>
