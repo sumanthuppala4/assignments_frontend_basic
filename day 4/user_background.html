@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <body>
+            <form>
+                user fav color:
+                <input type="text" id="t1"><br/><br/>
+                <input type="button" onclick="f1()"   value="Set Item" />
+
+            </form>
+            <a href="new.html">link</a>
+            <script>
+                function f1()
+                {
+                    var obj=document.getElementById("t1");
+                    localStorage.setItem("color",obj.value);
+                
+                }
+            </script>
+        </body>
+    </head>
+</html>
