@@ -1,0 +1,75 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3> working with JSON</h3>
+        <hr/>
+        <form>
+            <label>Empno:</label>
+            <input type="number" id="t1">
+            <br/>
+            <br/>
+            <label>Ename:</label>
+            <input type="text" id="t2">
+            <br/>
+            <br/>
+            <label>Job:</label>
+            <input type="text" id="t3">
+            <br/>
+            <br/>
+            <label>Salary:</label>
+            <input type="number" id="t4">
+            <br/>
+            <br/>
+            <label>Dept no:</label>
+            <input type="number" id="t5">
+            <br/>
+            <br/>
+            <input type="text" id="t7"/><br/>
+            <input type="button" value="Convert to JSON" onclick ="f1()">
+            <input type="button" value="Convert" onclick ="f2()">
+
+
+
+
+
+
+        </form>
+        <p id="t6" > </p>
+       
+        <script>
+            function f1()
+            {   
+                var obj={empno: parseInt(document.getElementById("t1").value),
+                         ename:document.getElementById("t2").value,
+                         job:document.getElementById("t3").value, 
+                         salary: parseInt(document.getElementById("t4").value), 
+                         depno:parseInt(document.getElementById("t5").value)
+                         };
+               
+                
+                 var str=JSON.stringify(obj);
+                 console.log(str);
+                 var pobj=document.getElementById("t6");
+                 pobj.innerText=str;
+
+
+           }
+           function f2()
+           {
+              var str2=document.getElementById("t7").value;
+              var obj=JSON.parse(str2);
+              var text=document.getElementById("t1");
+              text.value=obj.empno;
+              document.getElementById("t2").value=obj.ename;
+              document.getElementById("t3").value=obj.job;
+              document.getElementById("t4").value=obj.salary;
+              document.getElementById("t5").value=obj.depno;
+
+           }
+                         
+            
+        </script>
+    </body>
+</html>

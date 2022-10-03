@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <body>
+            <h3>Storing User Preferences in LocalStorage</h3>
+		    <hr/>
+            
+		<fieldset>
+			<legend>User details</legend>
+			
+			Customer name :  <input type="text"   value="sum"  id="cid"  name="cid"  />
+			<br/><br/>
+			
+			Joined date :  <input type="date"  value="2022-09-13" id="jdate"  name="jdate"/>
+			<br/><br/>
+			
+			Fav color :  <input type="color" value="#cf2626"  id="color"  name="color"  />
+			<br/><br/>
+			
+			<input type="button"  value="Save User Data"   onclick="fn_saveData()" />
+			<input type="button"  value="Delete User Data"  onclick="fn_deleteData()" />
+			
+		</fieldset>
+        <br/><br/>
+		
+		<fieldset>
+			<input type="button"  value="Get User Data"   onclick="fn_getData()" />
+			
+			<p  id="p1"></p>
+			
+			
+		</fieldset>
+        <script>
+            function fn_saveData()
+            {
+                
+                 var textCidObj=document.getElementById("cid");
+                 var textDateObj=document.getElementById("jdate");
+                 var textColorObj=document.getElementById("color");
+                 var userObj={};
+                 userObj.customerID=textCidObj.value;
+                 userObj.joinedDate= textDateObj.value;
+                 userObj.colour= textColorObj.value;
+                 
+                 var  str  =  JSON.stringify( userObj );
+				
+                localStorage.setItem("userData",  str);
+                alert("User details are saved in localStorage");
+            
+
+
+            }
+            function   fn_deleteData()
+				{
+						
+						localStorage.removeItem("userData");
+						alert("User details are removed from localStorage");
+						var  paraObj = document.getElementById("p1");
+						paraObj.innerText="";
+					
+						
+				}
+            
+				function fn_getData()
+				{
+											
+						var   str  =   localStorage.getItem("userData");
+					
+						var  paraObj = document.getElementById("p1");
+					
+					if(  str ==  null )
+					{
+							alert("There is no user data in localStorage");
+							paraObj.innerText = "";
+							return;   
+					}
+																		
+							var  userObj  =  JSON.parse(str);
+						
+						
+						paraObj.innerText =  userObj.customerID + " , " + userObj.joinedDate +  " , " + userObj.colour;
+				}
+				
+
+        </script>
+        </body>
+    </head>
+</html>

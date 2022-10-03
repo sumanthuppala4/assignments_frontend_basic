@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <body id="body">
+            <h3 id="h3"></h3> 
+            <p id="p1"></p>
+        <script>
+            var str=localStorage.getItem("userData");
+            var bodyObj=document.getElementById("body");
+            var headingObj=document.getElementById("h3");
+            var paraObj=document.getElementById("p1");
+            var obj=JSON.parse(str);
+            if(str==null)
+            { 
+                bodyObj.backgroundColor="white";
+                headingObj.innerText = "welcome to Guest user";
+                paraObj.innerText="DATE=NA";
+                
+            }
+        else{
+           
+            console.log(obj);
+            bodyObj.style.backgroundColor=obj.colour;
+            headingObj.innerText= "welcome to "+ obj.customerID;
+            paraObj.innerText= obj.customerID+" joined data="+obj.joinedDate;
+        }
+        </script>
+        </body>
+    </head>
+</html>

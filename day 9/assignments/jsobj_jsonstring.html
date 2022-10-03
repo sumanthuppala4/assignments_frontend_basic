@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3>  Converting  JS object into JSON string
+			and   JSON string into JS object </h3>
+        <input type="button"  value="stringfy" onclick="f_stringify()"/>
+        <input type="button"  value="parse" onclick="f_parse()"/>
+
+
+        <script>
+            function f_stringify()
+            {
+                var obj={ empno:24, job: "teacher", salary:"700", depno:"ECE"};
+                var str=JSON.stringify(obj);
+                console.log(str);
+            }
+            function f_parse()
+            {
+                var str2='{ "empno":24, "job": "teacher", "salary":700, "depno":"ECE"}';
+                var obj2=JSON.parse(str2);
+                console.log(obj2);
+            }
+        </script>
+
+    </body>
+</html>

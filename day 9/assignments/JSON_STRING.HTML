@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <input type="button" value="Get User data" onclick="f1()"/>
+        <p id="p1"></p>
+        <img src=" " id="i1" />
+        
+    
+        
+
+
+    <script>
+        
+	var str  = '{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"}';
+    var obj=JSON.parse(str);
+     function f1()
+     {
+        var para=document.getElementById("p1");
+        var img=document.getElementById("i1");
+
+        
+        para.innerText="User id :"+obj.id+"\n"+"First name :"+obj.first_name+"\n"+"Last name :"+obj.last_name+"\n"+"Email : "+obj.email+"\n"+"Avatar :";
+        img.src="https://reqres.in/img/faces/2-image.jpg";
+        
+
+     }
+    </script>
+    </body>
+</html>

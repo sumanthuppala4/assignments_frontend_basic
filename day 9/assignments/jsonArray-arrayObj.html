@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h3> 
+              Converting Array of Objects into JSON string
+              JSON string into Array of Objects</h3>
+        <input type="button"  value="stringfy" onclick="f_stringify()"/>
+        <input type="button"  value="parse" onclick="f_parse()"/>
+
+
+        <script>
+            function f_stringify()
+            {
+                var obj=[{ empno:24, job: "teacher", salary:"700", depno:"ECE"},
+                         { empno:25, job: "LAB ASSISTANT", salary:"900", depno:"CSE"},
+                         { empno:26, job: "STAFF", salary:"1000", depno:"BIO"},
+                         { empno:27, job: "WARDEN", salary:"800", depno:"EEE"},
+                         { empno:28, job: "HOD", salary:"500", depno:"CHE"}];
+                var str=JSON.stringify(obj);
+                
+                console.log(str);
+            }
+            function f_parse()
+            {
+                var str2='[{"empno":24,"job":"teacher","salary":"700","depno":"ECE"},{"empno":25,"job":"LAB ASSISTANT","salary":"900","depno":"CSE"},{"empno":26,"job":"STAFF","salary":"1000","depno":"BIO"},{"empno":27,"job":"WARDEN","salary":"800","depno":"EEE"},{"empno":28,"job":"HOD","salary":"500","depno":"CHE"}]';
+                var obj2=JSON.parse(str2);
+                console.log(obj2);
+            }
+
+        </script>
+
+    </body>
+</html>
