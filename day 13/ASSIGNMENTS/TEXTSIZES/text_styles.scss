@@ -1,0 +1,15 @@
+$size: 10px;
+@for $i from 1 to 7
+{
+    .ts-#{$i}
+    {
+        font-size:(7-$i)*$size;
+        @if($i<4)
+        {
+            color:red;
+        }
+        @else{
+            color: green;
+        }
+    }
+}

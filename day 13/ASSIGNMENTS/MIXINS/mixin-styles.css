@@ -1,0 +1,24 @@
+.shape-rectangle {
+  background-color: blue;
+  width: 150px;
+  height: 100px;
+}
+
+.shape-circle {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.shape-square {
+  background-color: green;
+  width: 150px;
+  height: 150px;
+}
+
+.shape {
+  background-color: rgb(39, 170, 85);
+  width: 150px;
+  height: 100px;
+}/*# sourceMappingURL=mixin-styles.css.map */

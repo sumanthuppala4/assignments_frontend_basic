@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <p class="display-3">Modal login form</p>
+
+
+      <button type="button" class="btn btn-primary mx-5" 
+                      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Show login 
+      </button>
+     
+      <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="display-6">login form</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body  text-info">
+                   login id &nbsp :
+                   <input type="text" id="text"/><br/><br/>
+                   password:
+                   <input type="password"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" onclick="on_click()"  class="btn btn-primary">login</button>
+                  </div>
+            </div>
+        </div>
+      </div>
+      <script>
+
+        function on_click()
+        {
+             var textObjId=document.getElementById("text");
+            
+             if(textObjId.value=="user1" || textObjId.value=="user2" )
+             {
+                  alert("wlecome to "+textObjId.value);
+                  return;
+             }
+             alert("welcome to guest user")
+        }
+      </script>
+</body>
+</html>

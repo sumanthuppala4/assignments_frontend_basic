@@ -1,0 +1,67 @@
+@import 'paragraph-heading';
+a{
+    text-decoration: none;
+   
+    color: black;
+    margin-right:2px;
+   
+    &:hover{
+        text-decoration: underline;
+        font-weight: bold;
+
+
+    }
+
+}
+.shpaedesc(@shape)when(@shape="circle")
+{
+    width:100px;
+    height:100px;
+
+    border-radius: 50%;
+}
+.shpaedesc(@shape)when(@shape="square")
+{
+    width:100px;
+    height:100px;
+
+    
+}
+
+
+
+.circle
+{
+   .shpaedesc("circle")
+}
+.square
+{
+    .shpaedesc("square")
+}
+.button-class
+{
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+}
+
+.button-class {
+    border: 1px solid black;
+    text-align: center;
+    align-items: center;
+  }
+  .button-style{
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:200px;
+    background-color: black;
+    color:white ;
+    border-radius: 20px;
+  
+    
+  
+  }
+
+  

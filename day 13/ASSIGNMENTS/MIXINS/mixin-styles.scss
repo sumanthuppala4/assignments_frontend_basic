@@ -1,0 +1,39 @@
+@mixin button($buttoncolor:blue , $shape:"rectangle")
+{
+    background-color: $buttoncolor;
+    @if($shape=="rectangle")
+    {
+        width:150px;
+        height:100px
+        
+    }
+    @if($shape=="circle")
+    {
+        width:100px;
+        height:100px;
+        border-radius:50%;
+    }
+    @if($shape=="square")
+    {
+        width:150px;
+        height:150px;
+        
+    }
+
+}
+
+.shape-rectangle{
+    @include button;
+}
+.shape-circle{
+    @include button($buttoncolor:red , $shape:"circle")
+
+}
+.shape-square{
+    @include button($buttoncolor:green , $shape:"square")
+
+}
+.shape{
+    @include button ($buttoncolor:rgb(39, 170, 85))
+}
+
